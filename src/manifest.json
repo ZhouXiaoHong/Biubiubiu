@@ -1,0 +1,45 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "根据设置,快速导出成图片",
+      "identifier": "quickExport",
+      "script": "./quickExportImage.js",
+      "shortcut": "ctrl shift q"
+    },
+    {
+      "name": "导出成图片",
+      "identifier": "export",
+      "script": "./exportImage.js",
+      "shortcut": "ctrl shift e"
+    },
+    {
+      "name": "复制文本",
+      "identifier": "text",
+      "script": "./getText.js",
+      "shortcut": "ctrl shift c"
+    },
+    {
+      "name": "导出CSS",
+      "identifier": "css",
+      "script": "./getCSS.js",
+      "shortcut": "ctrl shift d"
+    },
+    {
+      "name": "设置",
+      "identifier": "setting",
+      "script": "./setting.js"
+    }
+  ],
+  "menu": {
+    "title": "biuiubiu~",
+    "items": [
+      "quickExport",
+      "export",
+      "text",
+      "css",
+      "setting"
+    ]
+  }
+}

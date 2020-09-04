@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      padding: 10px;
+      font-family: "PingFang SC";
+    }
+
+    label {
+      width: 50px;
+      display: inline-block;
+    }
+
+    label:not([for]) {
+      width: 80px;
+      display: inline-block;
+      padding-top: 5px;
+      font-size: 13px;
+    }
+
+    button {
+      width: 50px;
+      height: 25px;
+      border: none;
+      box-shadow: none;
+      border-radius: 2px;
+    }
+
+    input[name=url] {
+      width: 265px;
+      outline: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .title {
+      margin-bottom: 5px;
+    }
+
+    .title::before {
+      content: '';
+      display: inline-block;
+      background-color: dodgerblue;
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      margin-right: 5px;
+    }
+  </style>
+  <script type="text/javascript" src="../resources_jquery-3_5_1_slim_min.js"></script>
+</head>
+
+<body>
+<form id="form">
+  <p class="title">图片导出</p>
+
+  <div>
+    <label>导出方式</label>
+    <input type="radio" id="url" name="type" value="url">
+    <label for="url">url</label>
+    <input type="radio" id="file" name="type" value="file">
+    <label for="file">file</label>
+  </div>
+
+  <div id="urlContainer" class="hidden">
+    <label>上传地址</label>
+    <input name="url" type="text">
+  </div>
+
+  <div>
+    <label>格式</label>
+    <input type="checkbox" id="png" name="formats" value="png">
+    <label for="png">png</label>
+    <input type="checkbox" id="svg" name="formats" value="svg">
+    <label for="svg">svg</label>
+    <input type="checkbox" id="jpg" name="formats" value="jpg">
+    <label for="jpg">jpg</label>
+    <input type="checkbox" id="pdf" name="formats" value="pdf">
+    <label for="pdf">pdf</label>
+  </div>
+
+  <div>
+    <label>尺寸</label>
+    <input type="checkbox" id="@1x" name="scales" value="1">
+    <label for="@1x">@1x</label>
+    <input type="checkbox" id="@2x" name="scales" value="2">
+    <label for="@2x">@2x</label>
+    <input type="checkbox" id="@3x" name="scales" value="3">
+    <label for="@3x">@3x</label>
+  </div>
+
+  <br>
+
+  <div class="code">
+    <p class="title">代码导出</p>
+
+    <div>
+      <label>单位</label>
+      <input style="width: auto" name="unit" type="text" placeholder="px">
+    </div>
+
+    <div>
+      <label>导出方式</label>
+      <input type="radio" id="auto" name="rate" value="auto">
+      <label for="auto">auto</label>
+      <input type="radio" id="1" name="rate" value="1">
+      <label for="1">1</label>
+      <input type="radio" id="2" name="rate" value="2">
+      <label for="2">2</label>
+      <input type="radio" id="3" name="rate" value="3">
+      <label for="3">3</label>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <button id="save" style="margin-left: 85px;background-color: dodgerblue;color: #fff;">保存</button>
+  <button id="cancel" style="margin-left: 20px;">取消</button>
+</form>
+<script type="text/javascript" src="../resources_export.js"></script>
+</body>
+
+</html>
